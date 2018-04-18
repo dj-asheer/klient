@@ -6,5 +6,9 @@ namespace App;
 
 class Post extends Model
 {
-    protected $guarded = [];
+    public function Comments()
+    {
+    	return $this->hasMany('App\Comment');
+    	// Comments::class
+    }
 }
